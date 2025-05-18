@@ -1,0 +1,99 @@
+LIBRARY IEEE; 
+
+USE IEEE.STD_LOGIC_1164.ALL; 
+
+Entity traffic_light is 
+
+Port(clk, Sa, Sb: in bit; 
+
+Ra, Rb, Ga, Gb, Ya, Yb: inout bit); 
+
+End traffic_light; 
+
+ 
+
+Architecture traffic_Arch of traffic_light is 
+
+Signal state, nextstate: integer range 0 to 12; 
+
+Type light is (R, Y, G); 
+
+Signal lightA, lightB: light; 
+
+-- define SIGNALS for waveform output 
+
+BEGIN 
+
+Process(state, Sa, Sb) 
+
+BEGIN 
+
+Ra <= '0'; Rb <= '0'; Ga <= '0'; Gb <= '0'; 
+
+Ya <= '0'; Yb <= '0'; 
+
+Case state is 
+
+When 0 to 4 => Ga <= '1'; Rb <= '1'; 
+
+nextstate <= state+1; 
+
+When 5 => Ga <= '1'; Rb <= '1'; 
+
+If Sb = '1' then 
+
+nextstate <= 6; 
+
+End if; 
+
+When 6 => Ya<= '1'; Rb<= '1'; 
+
+nextstate <= 7; 
+
+When 7 to 10 => Ra <= '1'; Gb <= '1';  
+
+nextstate <= state+1; 
+
+When 11 =>Ra <= '1'; Gb <= '1'; 
+
+If (Sa='1' or Sb='0') then 
+
+nextstate <= 12; 
+
+End if; 
+
+When 12 => Ra <= '1'; Yb <= '1'; 
+
+ nextstate <= 0; 
+
+End Case; 
+
+End Process; 
+
+Process(clk) 
+
+BEGIN 
+
+if clk'event and clk = '1' then 
+
+state <= nextstate; 
+
+END if; 
+
+END PROCESS; 
+
+lightA <= R when Ra= '1' 
+
+Else Y when Ya= '1' 
+
+Else G when Ga= '1'; 
+
+lightB <= R when Rb= '1' 
+
+Else Y when Yb=  '1' 
+
+Else G when Gb= '1'; 
+
+END traffic_Arch; 
+
+ 

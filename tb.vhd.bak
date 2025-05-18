@@ -1,0 +1,73 @@
+-- Testbench for traffic_light component
+
+LIBRARY IEEE;
+USE IEEE.STD_LOGIC_1164.ALL;
+
+ENTITY traffic_light_tb IS
+END ENTITY;
+
+ARCHITECTURE behavior OF traffic_light_tb IS
+  -- Component instantiation
+  COMPONENT traffic_light
+Port(clk, Sa, Sb: in bit; 
+Ra, Rb, Ga, Gb, Ya, Yb: inout bit); 
+  END COMPONENT;
+  
+  -- Inputs
+  SIGNAL clk_tb : BIT := '0';
+  SIGNAL Sa_tb : BIT := '0';
+  SIGNAL Sb_tb   : BIT := '0';
+
+  -- Outputs
+  SIGNAL Ra_tb   : BIT;
+  SIGNAL Rb_tb   : BIT;
+  SIGNAL Ga_tb   : BIT;
+  SIGNAL Gb_tb   : BIT;
+  SIGNAL Ya_tb   : BIT;
+  SIGNAL Yb_tb   : BIT;
+
+BEGIN
+  -- Instantiate the component
+  UUT: traffic_light PORT MAP (
+    clk => clk_tb ,
+    Sa  => Sa_tb ,
+    Sb  => Sb_tb ,
+    Ra  => Ra_tb ,
+    Rb  => Rb_tb ,
+    Ga  => Ga_tb ,
+    Gb  => Gb_tb ,
+    Ya  => Ya_tb ,
+    Yb  => Yb_tb
+  );
+
+  -- Clock process
+  PROCESS
+  BEGIN
+    clk_tb  <= '0';
+    WAIT FOR 10 ns;
+    clk_tb <= '1';
+    WAIT FOR 10 ns;
+  END PROCESS;
+  
+  -- Stimulus process
+  PROCESS
+  BEGIN
+    WAIT FOR 10 ns; -- Wait for initialization
+
+    -- Sa = 1, Sb = 0 (Sensor A activated)
+    Sa_tb <= '1';
+    Sb_tb <= '0';
+    WAIT FOR 60 ns;
+
+    -- Sa = 0, Sb = 0 (No sensor activated)
+    Sa_tb <= '0';
+    Sb_tb <= '0';
+    WAIT FOR 50 ns;
+
+    -- Sa = 0, Sb = 1 (Sensor B activated)
+    Sa_tb <= '0';
+    Sb_tb <= '1';
+    WAIT FOR 50 ns;
+  END PROCESS;
+
+ END behavior;

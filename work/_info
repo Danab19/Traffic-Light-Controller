@@ -1,0 +1,107 @@
+m255
+K4
+z2
+13
+!s112 1.1
+!i10d 8192
+!i10e 25
+!i10f 100
+cModel Technology
+dC:/intelFPGA/18.1
+Etraffic_light
+Z0 w1713442587
+Z1 DPx3 std 6 textio 0 22 zE1`LPoLg^DX3Oz^4Fj1K3
+Z2 DPx4 ieee 14 std_logic_1164 0 22 eNV`TJ_GofJTzYa?f<@Oe1
+Z3 dC:/Users/Qassim/Desktop/Zahraa/FinalProject_470
+Z4 8C:/Users/Qassim/Desktop/Zahraa/FinalProject_470/component.vhd
+Z5 FC:/Users/Qassim/Desktop/Zahraa/FinalProject_470/component.vhd
+l0
+L5
+V@Vb6ePRXe9]^m;?hS8`aL1
+!s100 U?6FdjMLB?Na2AM@zI3VK2
+Z6 OV;C;10.5b;63
+32
+Z7 !s110 1713442591
+!i10b 1
+Z8 !s108 1713442591.000000
+Z9 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Qassim/Desktop/Zahraa/FinalProject_470/component.vhd|
+Z10 !s107 C:/Users/Qassim/Desktop/Zahraa/FinalProject_470/component.vhd|
+!i113 1
+Z11 o-work work -2002 -explicit
+Z12 tExplicit 1 CvgOpt 0
+Atraffic_arch
+R1
+R2
+Z13 DEx4 work 13 traffic_light 0 22 @Vb6ePRXe9]^m;?hS8`aL1
+l26
+L15
+VMa01cJM=fX_n]g1_QRRU@2
+!s100 _UglLmH>mFM9j@So:PLQ>3
+R6
+32
+R7
+!i10b 1
+R8
+R9
+R10
+!i113 1
+R11
+R12
+Etraffic_light_tb
+Z14 w1713438806
+R1
+R2
+R3
+Z15 8C:/Users/Qassim/Desktop/Zahraa/FinalProject_470/tb.vhd
+Z16 FC:/Users/Qassim/Desktop/Zahraa/FinalProject_470/tb.vhd
+l0
+L6
+V`WQSZc5j_iN8JMo6e8X^81
+!s100 l<LSPC6C]IQXf=1nfW8l23
+R6
+32
+Z17 !s110 1713438810
+!i10b 1
+Z18 !s108 1713438810.000000
+Z19 !s90 -reportprogress|300|-work|work|-2002|-explicit|-stats=none|C:/Users/Qassim/Desktop/Zahraa/FinalProject_470/tb.vhd|
+Z20 !s107 C:/Users/Qassim/Desktop/Zahraa/FinalProject_470/tb.vhd|
+!i113 1
+R11
+R12
+Abehavior
+R1
+R2
+DEx4 work 16 traffic_light_tb 0 22 `WQSZc5j_iN8JMo6e8X^81
+l29
+L9
+V[YeLe;5ZfVGjb__ioB1S23
+!s100 ?hzaQalobZl8`B_OiBP1F2
+R6
+32
+R17
+!i10b 1
+R18
+R19
+R20
+!i113 1
+R11
+R12
+Atestbench_arch
+R1
+R2
+DEx4 work 16 traffic_light_tb 0 22 JRD@^1<A<]gb`hh=5AhWC0
+l43
+L13
+V^Y@DIN?gUQFMVea`^zTJJ3
+!s100 <[TmjhR>Eg9a992Ko_=d60
+R6
+32
+!s110 1713392741
+!i10b 1
+!s108 1713392741.000000
+R19
+R20
+!i113 1
+R11
+R12
+w1713392714
