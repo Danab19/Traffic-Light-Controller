@@ -4,7 +4,7 @@
 
 * Zahra AlMudaweb (ID: A00749)
 * Dana Barhoom (ID: A00200)
-* **Supervisor**: Dr. Herbert Azuela
+* **Supervisor**: Mr. Herbert Azuela
 * **University**: American University of Bahrain (AUBH)
 * **Date**: 18/04/2024
 
